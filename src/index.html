@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coding Errors</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:100,400');
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,400');
+
+
+        html, body {
+            font-family: 'Raleway', 'Arial', sans-serif;
+            padding-top: 40px;
+            margin: 0;
+            background-image: url("assets/cubes.png");
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+
+        header {
+            background-color: #1c2228;
+            width: 100%;
+            height: 5em;
+            position: fixed;
+            top: 0;
+            color: #d8d8d8;
+        }
+
+        .header-content-left {
+            display: inline-block;
+            padding: .5em .3em .3em 2em;
+        }
+
+        .header-content-right {
+            display: inline-block;
+            float: right;
+            padding: .5em .5em .3em 2em;
+        }
+
+        .plus-circle {
+            width: 60px;
+            height: 60px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            background-color: #ecf0f1;
+        }
+
+        .plus-circle:hover {
+            background-color: #bdc1c2;
+            transition: 0.3s;
+        }
+
+        .header-title {
+            padding: 0;
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .header-subtitle {
+            margin: 0;
+            font-size: .9em;
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 100;
+        }
+
+        main {
+            max-width: 50em;
+            margin: auto;
+        }
+
+
+        form {
+            width: 100%;
+        }
+
+        .form-piece {
+            display: flex;
+            width: 100%;
+            margin: 1em auto;
+        }
+
+        .form-piece label {
+            display: inline-block;
+            width: 20%;
+        }
+
+        .form-piece input, textarea {
+            width: 80%;
+            border: 1px solid #b4b4b4;
+            padding: 6px 10px;
+            font-size: 1.2em;
+        }
+
+        .form-piece input {
+            height: 2em;
+        }
+
+        .form-piece textarea {
+            height: 5em;
+            resize: none;
+        }
+
+        .form-piece .form-code {
+            font-family: 'Inconsolata', monospace;
+            font-size: 0.8em;
+        }
+
+        .form-button {
+            padding: 10px;
+            background-color: #ecf0f1;
+            border: 1px solid #b4b4b4;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1em;
+        }
+
+        .form-button:hover {
+            background-color: #bdc1c2;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: #ebebeb;
+        }
+
+        ul li:nth-child(even) {
+            background-color: #d8d8d8;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 1.25em;
+            width: 100%;
+            height: 1.25em;
+            font-size: .8em;
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content-left">
+        <span class="header-title">Coding Errors</span><br/>
+        <span class="header-subtitle">Keep Track of your Coding Errors;</span>
+    </div>
+    <div class="header-content-right">
+        <div class="plus-circle"></div>
+    </div>
+</header>
+
+<main>
+    <section>
+        <h2>Add a new entry</h2>
+        <form action="example.com">
+            <div class="form-piece">
+                <label for="title">Title</label>
+                <input id="title" name="title">
+            </div>
+            <div class="form-piece">
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <div class="form-piece">
+                <label for="code">Code Example</label>
+                <textarea class="form-code" id="code" name="code_example"
+                          placeholder="Paste your code here ...."></textarea>
+            </div>
+            <div class="form-piece align-right">
+                <button type="submit" class="form-button">send to eternity</button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <h2>All my Errors</h2>
+        <ul>
+            <li>
+                <article>
+                    <h3>DATE</h3>
+                    <p>CONTENT</p>
+                    <div>CODE (IF IT HAS)</div>
+                </article>
+
+            </li>
+            <li>
+                <article>
+                    <h3>DATE</h3>
+                    <p>A SECOND ONE</p>
+                    <div>CODE (IF IT HAS)</div>
+                </article>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>Developed at the <a href="http://fhnw.ch" target="_blank"><dfn title="Fachhochschule Nordwestschweiz">FHNW</dfn></a>
+        by <a href="https://www.github.com/lichtwellenreiter" target="_blank">lichtwellenreiter</a></p>
+</footer>
+
+</body>
+</html>
