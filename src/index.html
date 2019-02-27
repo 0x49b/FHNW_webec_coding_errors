@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Coding Errors</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Raleway:100,400');
         @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,400');
-
 
         html, body {
             font-family: 'Raleway', 'Arial', sans-serif;
             padding-top: 40px;
             margin: 0;
             background-image: url("assets/cubes.png");
-        }
-
-        .align-right {
-            text-align: right;
         }
 
 
@@ -47,10 +45,47 @@
             -moz-border-radius: 30px;
             border-radius: 30px;
             background-color: #ecf0f1;
+            display: table;
         }
 
-        .plus-circle:hover {
-            background-color: #bdc1c2;
+
+        .plus-horizontal {
+            margin: auto;
+            position: relative;
+            top: 25px;
+            height: 10px;
+            width: 40px;
+            background-color: #1c2228;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .plus-vertical {
+            margin: auto;
+            position: relative;
+            top: 0;
+            height: 40px;
+            width: 10px;
+            background-color: #1c2228;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .plus-circle:hover .plus-horizontal {
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            transition: 0.3s;
+        }
+
+        .plus-circle:hover .plus-vertical {
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
             transition: 0.3s;
         }
 
@@ -115,6 +150,7 @@
             border: 1px solid #b4b4b4;
             font-family: 'Raleway', sans-serif;
             font-size: 1em;
+            margin-left: auto;
         }
 
         .form-button:hover {
@@ -146,6 +182,35 @@
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
         }
+
+        article {
+            clear: both;
+        }
+
+        .entry-date {
+            font-size: 3.125em;
+            width: 30%;
+            padding: 30px;
+            display: inline-block;
+        }
+
+        .entry-title {
+            width: 45%;
+            height: 100%;
+            display: inline-block;
+            padding: 30px;
+            margin-top: 0;
+        }
+
+        .entry-open-bubble {
+            width: 40px;
+            height: 40px;
+            background-color: orange;
+            display: inline-block;
+            border-radius: 25px;
+        }
+
+
     </style>
 </head>
 <body>
@@ -156,12 +221,17 @@
         <span class="header-subtitle">Keep Track of your Coding Errors;</span>
     </div>
     <div class="header-content-right">
-        <div class="plus-circle"></div>
+        <div class="plus-circle">
+
+            <div class="plus-horizontal"></div>
+            <div class="plus-vertical"></div>
+
+        </div>
     </div>
 </header>
 
 <main>
-    <section>
+    <section class="entry-form">
         <h2>Add a new entry</h2>
         <form action="example.com">
             <div class="form-piece">
@@ -177,8 +247,8 @@
                 <textarea class="form-code" id="code" name="code_example"
                           placeholder="Paste your code here ...."></textarea>
             </div>
-            <div class="form-piece align-right">
-                <button type="submit" class="form-button">send to eternity</button>
+            <div class="form-piece button-form-piece">
+                <button type="submit" class="form-button align-right">send to eternity</button>
             </div>
         </form>
     </section>
@@ -187,17 +257,17 @@
         <ul>
             <li>
                 <article>
-                    <h3>DATE</h3>
-                    <p>CONTENT</p>
-                    <div>CODE (IF IT HAS)</div>
+                    <div class="entry-date">28.02.2019</div>
+                    <div class="entry-title">TITLE</div>
+                    <div class="entry-open-bubble"></div>
                 </article>
 
             </li>
             <li>
                 <article>
-                    <h3>DATE</h3>
-                    <p>A SECOND ONE</p>
-                    <div>CODE (IF IT HAS)</div>
+                    <div class="entry-date">11.01.2019</div>
+                    <div class="entry-title">TITLE</div>
+                    <div class="entry-open-bubble"></div>
                 </article>
             </li>
         </ul>
